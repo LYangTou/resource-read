@@ -1,0 +1,28 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "src/**/*.d.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@resource-read/composables": [
+        "../../packages/composables/src"
+      ],
+      "@resource-read/components": [
+        "../../packages/components/src"
+      ],
+      "@resource-read/stores": [
+        "../../packages/stores/src"
+      ],
+      "@resource-read/request": [
+        "../../packages/request/src"
+      ]
+    }
+  }
+}

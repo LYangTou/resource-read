@@ -1,0 +1,21 @@
+{
+  "name": "@resource-read/demo",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "vue-tsc --noEmit -p tsconfig.json && vite build",
+    "test": "vitest run",
+    "type-check": "vue-tsc --noEmit -p tsconfig.json",
+    "lint": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@resource-read/components": "0.1.0",
+    "@resource-read/composables": "0.1.0",
+    "@resource-read/request": "0.1.0",
+    "@resource-read/stores": "0.1.0",
+    "vue": "^3.5.14",
+    "vue-router": "^4.5.1"
+  }
+}
