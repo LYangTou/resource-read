@@ -11,6 +11,9 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
+    "notes:dev": "vitepress dev notes --host 127.0.0.1 --port 5174",
+    "notes:build": "vitepress build notes",
+    "notes:preview": "vitepress preview notes --host 127.0.0.1 --port 4174",
     "test": "turbo test",
     "type-check": "turbo type-check",
     "lint": "turbo lint"
@@ -22,6 +25,7 @@
     "turbo": "^2.5.3",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
+    "vitepress": "^1.6.4",
     "vitest": "^3.1.4",
     "vue-tsc": "^2.2.10"
   }

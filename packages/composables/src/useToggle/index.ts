@@ -12,7 +12,6 @@ export interface useToggleOptions<T, F> {
 
 export function useToggle(initialValue: Ref<boolean>, options?: useToggleOptions<true, false>): ToggleFn
 export function useToggle(initialValue?: MaybeRef<boolean>, options?: useToggleOptions<true, false>): [ShallowRef<boolean>, ToggleFn]
-
 export function useToggle(initialValue: MaybeRef<boolean> = false, options: useToggleOptions<true, false> = {}): UseToggleReturn {
     const {
         truthyValue = true,

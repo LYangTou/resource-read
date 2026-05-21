@@ -22,14 +22,10 @@
 </template>
 
 <script setup lang="ts">
-import type { ShallowRef } from 'vue';
 import { DemoCard } from '@resource-read/components';
 import { useToggle } from '@resource-read/composables';
 
-const [enabled, toggleEnabled] = useToggle(false) as [
-  ShallowRef<boolean>,
-  (value?: boolean) => void,
-];
+const [enabled, toggleEnabled] = useToggle(false);
 </script>
 
 <style scoped>
