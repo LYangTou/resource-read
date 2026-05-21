@@ -76,3 +76,9 @@ const _value = shallowRef(isDark);
 // 改的就是 isDark.value。
 _value.value = false;
 ```
+
+## toValue
+
+<<< ../../packages/composables/src/useToggle/index.ts{30-32}
+
+将值、refs 或 getters 规范化为值。这与 unref() 类似，不同的是此函数也会规范化 getter 函数。如果参数是一个 getter，它将会被调用并且返回它的返回值。

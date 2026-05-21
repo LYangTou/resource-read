@@ -1,8 +1,10 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import { lineRangeSnippetPlugin } from './plugins/lineRangeSnippet';
+import { getNotePages, getSectionSidebar } from './navigation';
 
 const resolveSource = (sourcePath: string) => fileURLToPath(new URL(sourcePath, import.meta.url));
+const composablePages = getNotePages('composables');
 
 export default defineConfig({
   base: process.env.VITEPRESS_BASE ?? '/resource-read/',
@@ -17,14 +19,9 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Composables', link: '/composables/useToggle' },
+      { text: 'Composables', link: composablePages[0]?.link ?? '/' },
     ],
-    sidebar: [
-      {
-        text: 'Composables',
-        items: [{ text: 'useToggle', link: '/composables/useToggle' }],
-      },
-    ],
+    sidebar: [getSectionSidebar('composables', 'Composables')],
     socialLinks: [{ icon: 'github', link: 'https://github.com/LYangTou/resource-read' }],
   },
   vite: {

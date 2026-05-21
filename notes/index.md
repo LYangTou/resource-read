@@ -1,5 +1,10 @@
 # Resource Read Notes
 
+<script setup lang="ts">
+import { withBase } from 'vitepress';
+import { data as composables } from './composables.data';
+</script>
+
 这里用于记录源码阅读、设计思路和问题复盘。
 
 ## 当前能力
@@ -22,4 +27,8 @@ http://127.0.0.1:5174
 
 ## 示例
 
-- [useToggle](./composables/useToggle.md)
+<ul>
+  <li v-for="item in composables" :key="item.link">
+    <a :href="withBase(item.link)">{{ item.text }}</a>
+  </li>
+</ul>
