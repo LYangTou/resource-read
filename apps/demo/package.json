@@ -8,7 +8,8 @@
     "build": "vue-tsc --noEmit -p tsconfig.json && vite build",
     "test": "vitest run",
     "type-check": "vue-tsc --noEmit -p tsconfig.json",
-    "lint": "vue-tsc --noEmit -p tsconfig.json"
+    "lint": "eslint . --ext .ts,.vue",
+    "lint:fix": "eslint . --ext .ts,.vue --fix"
   },
   "dependencies": {
     "@resource-read/components": "0.1.0",
